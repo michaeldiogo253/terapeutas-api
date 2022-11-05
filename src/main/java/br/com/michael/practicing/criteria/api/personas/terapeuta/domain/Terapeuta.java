@@ -10,7 +10,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 public class Terapeuta {
 
-	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private long id;
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY) private Long id;
 	@OneToOne(cascade = CascadeType.ALL) private DadosPessoais dadosPessoais;
 	private String numeroRegistro;
 	private String especializacao;

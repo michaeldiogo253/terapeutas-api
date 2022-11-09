@@ -16,7 +16,12 @@ public class ListarTerapeutasService {
 	private final TerapeutaRepository terapeutaRepository;
 	private final EntityManager entityManager;
 
-	public List<Terapeuta> execute( String nome, String cpf, String email, String login, String especializacao, List<Long> idsTerapeutas){
+	public List<Terapeuta> execute(String nome,
+	                               String cpf,
+	                               String email,
+	                               String login,
+	                               String especializacao,
+	                               List<Long> idsTerapeutas) {
 
 		String jpql = "SELECT t FROM Terapeuta t " +
 		              "JOIN DadosPessoais d on d = t.dadosPessoais " +
